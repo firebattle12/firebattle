@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fire Battle | Play Mobile Games &amp; Win Real Money | Download Now</title>
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.ibb.co/mVzd16QJ/fire-battle-logi.jpg" type="image/png">
+
+  <!-- Meta SEO Tags -->
+  <meta name="description" content="Play Free Fire Max, BGMI, and Call Of Duty  on Fire Battle, India's largest social gaming app. Enjoy 100% GST &amp; TDS refund, 100% safe payments, quick withdrawal, RNG certified, and no use of bots. Download now!">
+  <meta name="keywords" content="Fire Battle, Esports India, Tournaments, Earn Money, Free Fire, BGMI, PUBG, Esports App, Real Cash Games">
+  <meta name="author" content="Fire Battle Team">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Fire Battle | Play Mobile Games &amp; Win Real Money | Download Now" />
+  <meta property="og:description" content="Play Free Fire Max, BGMI, and Call Of Duty  on Fire Battle, India's largest social gaming app. Enjoy 100% GST &amp; TDS refund, 100% safe payments, quick withdrawal, RNG certified, and no use of bots. Download now!" />
+  <meta property="og:image" content="https://i.ibb.co/mVzd16QJ/fire-battle-logi.jpg" />
+  <meta property="og:url" content="https://firebattle.online" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fire Battle - India's No.1 Esports Platform">
+  <meta name="twitter:description" content="Paid tournaments, real money, and fair gameplay. Download the Fire Battle App now.">
+  <meta name="twitter:image" content="https://i.ibb.co/mVzd16QJ/fire-battle-logi.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fire Battle",
+    "url": "https://firebattle.online",
+    "logo": "https://i.ibb.co/mVzd16QJ/fire-battle-logi.jpg",
+    "sameAs": [
+      "https://facebook.com/firebattle",
+      "https://instagram.com/firebattle",
+      "https://youtube.com/@firebattle"
+    ]
+  }
+  </script>
+
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --bg-light: #f1f1f1;
+      --text-light: #000;
+      --bg-dark: #0f1e40;
+      --text-dark: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      line-height: 1.6;
+      transition: 0.3s;
+    }
+
+    .dark-mode {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    .header {
+      background: linear-gradient(to right, #ff5722, #ff9800);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .logo span {
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 10px;
+      color: white;
+    }
+
+    .menu-btn {
+      font-size: 28px;
+      color: white;
+      background: none;
+      border: none;
+      display: none;
+      cursor: pointer;
+    }
+
+    .nav {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav li {
+      margin-left: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      color: yellow;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: #ff5722;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      .nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem;
+      margin-top: 60px;
+      background: linear-gradient(#0f30c4, #e64a19);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #000;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: #b2b9b0;
+    }
+
+    .slider h2 {
+      font-size: large;
+      text-align: center;
+      color: #000;
+    }
+
+    .about, .install-section {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    .about h2, .about h3, .install-section h2 {
+      margin-bottom: 1rem;
+    }
+
+    .about img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .slider {
+      background: white;
+      padding: 2rem 1rem;
+    }
+
+    .slide {
+      display: none;
+      width: 90%;
+      max-width: 500px;
+      margin: 1rem auto;
+      border-radius: 10px;
+    }
+
+    .slider img {
+      display: block;
+      width: 90%;
+      max-width: 300px;
+      margin: 10px auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .slider img:hover {
+      transform: scale(1.03);
+    }
+
+    .stats-section {
+      background: linear-gradient(to right, #ece8e6, #ff9800);
+      padding: 40px 20px;
+      color: #000;
+    }
+
+    .stat-box {
+      display: inline-block;
+      margin: 15px;
+    }
+
+    .stat-box h2 {
+      font-size: 2rem;
+    }
+
+    .stat-box p {
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #1c1c1c;
+      color: white;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+   
+
+    .dark-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px;
+      border-radius: 50%;
+      background: #ff9800;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="https://i.ibb.co/mVzd16QJ/fire-battle-logi.jpg" alt="Logo" />
+      <span>Fire Battle</span>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <ul class="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#support">Contact</a></li>
+      <li><a href="privacy policy.html">Privacy & Policy</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Fire Battle</h1>
+    <p>India's No.1 Esports Platform for Tournaments</p>
+    <a href="firebattle.apk" class="btn">Download App</a>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <h2>About Fire Battle</h2>
+    <p>We host paid tournaments for various games. Download our app to see pricing details.</p>
+    <h3>Fair Play</h3>
+    <p>All matches are fair and rewards are based on performance.</p>
+    <img src="https://cdn-icons-png.flaticon.com/128/939/939354.png" alt="Fair Play" />
+    <h3>Fast Performance</h3>
+    <p>Optimized app for smooth performance.</p>
+    <img src="https://cdn-icons-png.flaticon.com/128/10499/10499943.png" alt="Fast" />
+    <h3>Earn Real Money</h3>
+    <p>No points or tokens. Real rewards directly!</p>
+  </section>
+
+  <!-- Install -->
+  <section class="install-section">
+    <h2>How to Install</h2>
+    <img src="https://i.ibb.co/0yTfKQjm/fea.jpg" alt="Install" style="width: 90%; max-width: 400px;" />
+  </section>
+
+  <!-- Slider -->
+  <div class="slider">
+    <h2>App Screenshots</h2>
+    <img src="https://i.ibb.co/ns2WBfdV/ff1.jpg" class="slide" style="display: block;" />
+    <img src="https://i.ibb.co/chjdnRMD/ff-2.jpg" class="slide" />
+    <img src="https://i.ibb.co/Q7t47wTz/ff-3.jpg" class="slide" />
+    <img src="https://i.ibb.co/FkKKmF4P/ff-4.jpg" class="slide" />
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-section">
+    <div class="stat-box">
+      <h2>50,000+</h2>
+      <p>Tournaments Played</p>
+    </div>
+    <div class="stat-box">
+      <h2>4.5 Lakh+</h2>
+      <p>Participants</p>
+    </div>
+    <div class="stat-box">
+      <h2>₹2.5 Lakh+</h2>
+      <p>Winning Amount</p>
+    </div>
+    <div class="stat-box">
+      <h2>80,000+</h2>
+      <p>Rewards</p>
+    </div>
+  </div>
+
+  <!-- Support -->
+  <section id="support">
+    <h2>Support</h2>
+    <p>Need help? Contact us at <a href="mailto:firebattle12@gmail.com">firebattle12@gmail.com</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com/firebattle" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/firebattle" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://whatsapp.com/channel/0029VaAz0BhBPzjh2WqFMN0f" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="http://www.youtube.com/@g2k_e-sports" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    
+    <p>© 2025 Fire Battle. All rights reserved.</p>
+  </footer>
+
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+
+  <!-- Script -->
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav").classList.toggle("active");
+    }
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000);
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>

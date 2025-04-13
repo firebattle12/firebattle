@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fire Battle About</title>
+
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      
+      background: #f4f4f4;
+      line-height: 1.8;
+      transition: 0.3s;
+    }
+
+    .header {
+      background: linear-gradient(to right, #ff5722, #ff9800);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .logo span {
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 10px;
+      color: white;
+    }
+
+    .menu-btn {
+      font-size: 28px;
+      color: white;
+      background: none;
+      border: none;
+      display: none;
+      cursor: pointer;
+    }
+
+    .nav {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav li {
+      margin-left: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      color: yellow;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: #ff5722;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      .nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    .about {
+      max-width: 900px;
+      margin: 120px auto 0;
+      padding: 20px;
+      background: white;
+      border-left: 5px solid #ff5722;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .about h1 {
+      font-size: 2.5rem;
+      color: #000;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1rem;
+      text-align: justify;
+      text-indent: 20px; /* <-- First line indent */
+      white-space: pre-line;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #1c1c1c;
+      color: white;
+      margin: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="https://i.ibb.co/mVzd16QJ/fire-battle-logi.jpg" alt="Logo" />
+      <span>Fire Battle</span>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#support">Contact</a></li>
+      <li><a href="privacy policy.html">Privacy & Policy</a></li>
+    </ul>
+  </div>
+
+  <div class="about">
+    <h1>Privacy & Policy</h1>
+    <p>
+       Fire Battle Reserves right to cancel any match at anytime without any reason.
+
+ 
+
+        By participating in Fire Battle Matches, you accept and agree that you are above 18 years in age.
+        
+         
+        
+        In case the investigators or spectators find any suspicious player in the gameplay, Fire Battle reserves the right to disqualify, suspend or put the doer's account on hold and also cancel their winning prizes or amount.
+        
+        IF WE FOUND USING MULTIPLE ID THEN YOU WILL BE BANNED FROM OUR APP
+        
+        In case of any technical glitch, the match may get cancelled and in such cases the entry fees will be refunded to the participants or re-match may take place.
+        
+         
+        
+        In case any player fails to submit correct details while participating in any match then the reward/prize amount will be cancelled for that player and no refund will be processed.
+        
+         
+        
+        Players are not allowed to use any Mod or Hack in the Gameplay. If anyone is found suspicious, immediate action will be taken, the account will be suspended, all the pending withdrawals will be cancelled and wallet balance will become useless.
+        
+         
+        
+        Mis-using any in-game glitches or errors will result in disqualification of that player from the match and no reward for the same match will be considered.
+        
+         
+        
+        Do not use any Emulator to Play in non-emulator matches. Such players will be kicked and if remains un-kicked then they may not get the match rewards/prizes.
+        
+         
+        
+        Participants need to make sure to grab Match Details such as Room ID and Password before the match start time. The Room Id and Password are shared in the app and also through SMS. Grab them and join the room quickly. In case the participants fail to join the room before the match start time, they won't be able to join the match lateron and no refund will be processed for the same.
+        
+         
+        
+        In case participants fail to join the room due to any external issues from participants end (incl. Slow internet, multi-tasking, minimizing game, Receiving Calls or SMS, etc.) then no refund will be processed.
+        
+         
+        
+        If the participants are kicked or auto-kicked from the room without any reasons then the refund will be issued upon submitting proper valid evidences such as a Screenshot of the Error Screen or Message.
+        
+         
+        
+        Any of the policies mentioned here can change, get updates or removed at any time, so keep checking here for the latest policies and rules.
+        
+         
+        
+        Before participating in any match at Fire Battle, you agree to the Fair Play Policy and accept it.
+    </p>
+  </div>
+
+   <!-- Footer -->
+   <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com/firebattle" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/firebattle" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtube.com/@firebattle" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    
+    <p>© 2025 Fire Battle. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector(".nav");
+      nav.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fire Battle Blog</title>
+
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body { font-family: Arial, sans-serif; padding: 50px; background: #f4f4f4; line-height: 1.6; transition: 0.3s;}
+    h1 { text-align: center; color: #000; margin-top: 20px;}
+    .post { background: white; padding: 20px; margin: 20px 0; border-left: 5px solid #ff9800; position: relative; }
+    .post h2 { color: #0f1e40; margin-bottom: 10px; }
+    .read-more { 
+      background: #ff5722; 
+      color: white; 
+      border: none; 
+      padding: 8px 12px; 
+      cursor: pointer; 
+      border-radius: 4px; 
+      margin-top: 10px; 
+    }
+
+    .header {
+      background: linear-gradient(to right, #ff5722, #ff9800);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .logo span {
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 10px;
+      color: white;
+    }
+
+    .menu-btn {
+      font-size: 28px;
+      color: white;
+      background: none;
+      border: none;
+      display: none;
+      cursor: pointer;
+    }
+
+    .nav {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav li {
+      margin-left: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      color: yellow;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: #ff5722;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      .nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #1c1c1c;
+      color: white;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="https://i.ibb.co/mVzd16QJ/fire-battle-logi.jpg" alt="Logo" />
+      <span>Fire Battle</span>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#support">Contact</a></li>
+      <li><a href="privacy policy.html">Privacy & Policy</a></li>
+    </ul>
+  </div>
+
+  <h1>Fire Battle Blog</h1>
+  <div id="blog-container"></div>
+
+   <!-- Footer -->
+   <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com/firebattle" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/firebattle" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtube.com/@firebattle" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    
+    <p>© 2025 Fire Battle. All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch("post.json")
+      .then(res => res.json())
+      .then(posts => {
+        const container = document.getElementById("blog-container");
+        posts.forEach((post, index) => {
+          const div = document.createElement("div");
+          div.className = "post";
+
+          // Short version of content
+          const shortContent = post.content.length > 200 ? post.content.slice(0, 200) + "..." : post.content;
+
+          div.innerHTML = `
+            <h2>${post.title}</h2>
+            <p id="content-${index}">${shortContent}</p>
+            ${post.content.length > 200 ? `<button class="read-more" onclick="toggleContent(${index}, \`${post.content.replace(/`/g, '\\`')}\`)">Read More</button>` : ''}
+          `;
+
+          container.appendChild(div);
+        });
+      });
+
+    function toggleContent(index, fullContent) {
+      const contentPara = document.getElementById(`content-${index}`);
+      const button = contentPara.nextElementSibling;
+      
+      if (button.innerText === "Read More") {
+        contentPara.innerHTML = fullContent;
+        button.innerText = "Show Less";
+      } else {
+        contentPara.innerHTML = fullContent.slice(0, 200) + "...";
+        button.innerText = "Read More";
+      }
+    }
+  </script>
+</body>
+</html>
